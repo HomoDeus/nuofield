@@ -24,7 +24,7 @@ async fn main() -> Result<()> {
         .map(PathBuf::from)
         .unwrap_or_else(|| PathBuf::from("./data"));
     let state = AppState::load(data_dir.join("events.jsonl"))
-        .context("failed to load the deployment-owned event store")?;
+        .context("failed to load the user-controlled event store")?;
 
     let listener = TcpListener::bind(bind)
         .await

@@ -5,7 +5,7 @@
 - Human and Agent identities
 - Task intent, approvals, results, and evidence
 - Model provider and egress records
-- Deployment event history
+- User-owned deployment event history
 - Operator configuration and backups
 
 ## Trust boundaries
@@ -23,11 +23,13 @@ domain policy
 single-writer local storage
       │
       ▼
-operator-controlled filesystem and backups
+operator-managed filesystem and backups
 ```
 
-The deployment owner controls the host, process, data directory, backups, and
-network exposure. Model providers are outside the trusted storage boundary.
+The operator controls the host, process, data directory, backups, and network
+exposure under user authorization. Users retain sovereignty over their data
+and intelligent assets. Model providers are outside the trusted storage
+boundary.
 
 ## Implemented controls
 
@@ -51,10 +53,10 @@ network exposure. Model providers are outside the trusted storage boundary.
 | Actor IDs are not signed | Callers can claim another actor ID | Request signing and revocable credentials |
 | Plain HTTP | Network observers can read or modify traffic | TLS termination and signed requests |
 | One process lock only | Multiple writers can corrupt order | Transactional storage adapter |
-| Hash head is local | An owner can roll back the entire file | Signed checkpoints and external backup attestations |
+| Hash head is local | An operator can roll back the entire file | User-verifiable signed checkpoints and external backup attestations |
 | No rate limiting | Trusted-network denial of service remains possible | Per-actor and per-route limits |
 | Evidence URI is declarative | Referenced content may disappear or change | Content-addressed attachment store |
-| No secret vault | Provider keys have no managed lifecycle | Operator-owned encrypted secret store |
+| No secret vault | Provider keys have no managed lifecycle | User-controlled encrypted secret store |
 
 Until the first three gaps are closed, this implementation is a trusted-network
 technical slice rather than a production multi-user service.

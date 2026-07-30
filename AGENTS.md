@@ -11,9 +11,13 @@ before making architecture or feature decisions.
   successful append.
 - Treat humans and agents as separate actors. Never let an agent inherit a
   human credential.
+- Distinguish users from deployment operators. Infrastructure custody does not
+  transfer ownership of user data or intelligent assets.
+- Treat Fieldkeeper skills, memory, permissions, and behavior changes as
+  versioned user-owned assets.
 - Make model egress visible and removable. No external model is a runtime
   requirement.
-- Store deployment data only under the configured data directory.
+- Store user data only under the configured operator-managed data directory.
 - Keep public documentation self-contained and product-focused.
 
 ## Quality

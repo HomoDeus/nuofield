@@ -6,7 +6,7 @@
 - High-risk approval gate
 - Evidence-required completion
 - Visible model egress
-- Deployment-owned export
+- User-controlled export
 - Tamper-evident local event log
 
 ## M1 — Trusted single deployment
@@ -17,6 +17,8 @@
 - Live event subscriptions
 - Provider-neutral model routing with local and domestic adapters
 - Responsive web client
+- First-run onboarding with a default Fieldkeeper team
+- Versioned employee skills, permissions, memory, and rollback
 
 ## M2 — Team deployment
 
@@ -26,6 +28,8 @@
 - Approval inbox and policy engine
 - Notification adapters
 - Operator metrics without hidden telemetry
+- Employee templates and user-owned skill packs
+- Feedback-to-memory and evaluation workflow
 
 ## M3 — Distribution
 
@@ -34,6 +38,7 @@
 - Signed release artifacts and upgrade channels
 - Import/export compatibility guarantees
 - Public extension and Agent capability protocol
+- Portable employee assets across deployments
 
 Milestones advance only after the preceding collaboration loop has repeatable
 tests and real usage evidence.

@@ -6,7 +6,7 @@ The first architecture proves one invariant:
 
 > A human can assign work to an independently identified Agent; risky work
 > cannot start without human approval; execution, model egress, evidence, and
-> audit data remain exportable by the deployment owner.
+> audit data remain exportable by the user.
 
 ## Components
 
@@ -21,7 +21,7 @@ nuofield-server
       │                       zero I/O domain policy
       │
       ├─ durable append ───► nuofield-store
-      │                       deployment-owned JSONL + hash chain
+      │                       user-controlled JSONL + hash chain
       │
       └─ apply ────────────► in-memory workspace projection
 
@@ -82,7 +82,7 @@ views rebuilt by replaying the event log. The current event types are:
 New behavior should normally add an event or strengthen a projection invariant,
 not mutate stored history.
 
-## Data ownership
+## Data sovereignty
 
 The initial deployment stores one file:
 
@@ -90,8 +90,10 @@ The initial deployment stores one file:
 ${NUOFIELD_DATA_DIR}/events.jsonl
 ```
 
-The operator can stop the process and copy, inspect, export, back up, or delete
-that directory without contacting a hosted control plane.
+Users retain sovereignty over the stored data and derived intelligent assets.
+An authorized operator can stop the process and copy, inspect, export, back up,
+or delete the directory without contacting a hosted control plane. Operator
+access is infrastructure custody, not a transfer of user ownership.
 
 ## Scaling path
 

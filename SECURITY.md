@@ -15,7 +15,7 @@ NuoField is in an early technical-slice stage. The current server:
 - binds to loopback by default;
 - validates task authority and approval state;
 - appends before applying projections;
-- synchronizes each append to deployment-owned storage;
+- synchronizes each append to user-controlled, operator-managed storage;
 - verifies a tamper-evident audit chain at startup and readiness checks;
 - limits request bodies to 1 MiB;
 - has no telemetry or model-network dependency.

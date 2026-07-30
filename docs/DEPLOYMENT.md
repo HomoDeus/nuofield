@@ -13,7 +13,7 @@ Configuration:
 | Variable | Default | Meaning |
 |---|---|---|
 | `NUOFIELD_BIND` | `127.0.0.1:3000` | HTTP listen address |
-| `NUOFIELD_DATA_DIR` | `./data` | Deployment-owned data directory |
+| `NUOFIELD_DATA_DIR` | `./data` | Operator-managed data directory |
 | `RUST_LOG` | server and HTTP info | Structured log filter |
 
 ## Docker Compose

@@ -1,6 +1,6 @@
 [package]
 name = "nuofield-store"
-description = "Deployment-owned append-only event store for NuoField"
+description = "User-controlled append-only event store for NuoField"
 version.workspace = true
 edition.workspace = true
 rust-version.workspace = true
