@@ -15,3 +15,4 @@ services:
 
 volumes:
   nuofield-data:
+    name: nuofield-data
