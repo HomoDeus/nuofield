@@ -1,0 +1,17 @@
+services:
+  nuofield:
+    build:
+      context: .
+    image: nuofield:dev
+    environment:
+      NUOFIELD_BIND: 0.0.0.0:3000
+      NUOFIELD_DATA_DIR: /var/lib/nuofield/data
+      RUST_LOG: nuofield_server=info,tower_http=info
+    ports:
+      - "127.0.0.1:3000:3000"
+    volumes:
+      - nuofield-data:/var/lib/nuofield/data
+    restart: unless-stopped
+
+volumes:
+  nuofield-data:
